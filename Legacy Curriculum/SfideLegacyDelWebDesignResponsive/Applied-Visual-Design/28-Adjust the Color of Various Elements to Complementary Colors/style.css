@@ -1,0 +1,19 @@
+body {
+  background-color: white;
+}
+header {
+  background-color: #09a7a1;
+  color: white;
+  padding: 0.25em;
+}
+h2 {
+  color: #09a7a1;
+}
+button {
+  background-color: #ff790e;
+}
+footer {
+  background-color: #09a7a1;
+  color: white;
+  padding: 0.5em;
+}
