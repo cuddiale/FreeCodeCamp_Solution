@@ -1,0 +1,343 @@
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React App</title>
+    <script type="module" crossorigin=""
+        src="/FreeCodeCamp-Front-End-Development-Libraries-Projects/assets/index.55bf5780.js"></script>
+    <link rel="stylesheet" href="/FreeCodeCamp-Front-End-Development-Libraries-Projects/assets/index.955dc3a7.css">
+    <link rel="modulepreload" as="script" crossorigin=""
+        href="/FreeCodeCamp-Front-End-Development-Libraries-Projects/assets/index.efb8fca8.js">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="/FreeCodeCamp-Front-End-Development-Libraries-Projects/assets/index.880b873d.css">
+</head>
+
+<body>
+    <div id="app">
+        <div class="flex h-screen w-screen items-center justify-center bg-emerald-500">
+            <div class="flex h-full w-screen flex-col bg-white sm:flex-row">
+                <div class="h-1/2 w-full resize-y overflow-hidden sm:h-screen sm:resize-x"><textarea id="editor"
+                        data-testid="editor"
+                        class="h-full max-h-screen w-full min-w-max resize-none overflow-auto bg-slate-300 p-4 font-mono"
+                        placeholder="Write your markdown here" spellcheck="false"># Welcome to my React Markdown Previewer!
+  
+  ## This is a sub-heading...
+  ### And here's some other cool stuff:
+  
+  Heres some code, `&lt;div&gt;&lt;/div&gt;`, between 2 backticks.
+  
+  ```javascript
+  // this is multi-line code:
+  
+  function anotherExample(firstLine, lastLine) {
+    if (firstLine == '```' &amp;&amp; lastLine == '```') {
+      return multiLineCode;
+    }
+  }
+  ```
+  
+  You can also make text **bold**... whoa!
+  Or _italic_.
+  Or... wait for it... **_both!_**
+  And feel free to go crazy ~~crossing stuff out~~.
+  
+  There's also [links](https://www.freecodecamp.org), and
+  &gt; Block Quotes!
+  
+  And if you want to get really crazy, even tables:
+  
+  Wild Header | Crazy Header | Another Header?
+  ------------ | ------------- | -------------
+  Your content can | be here, and it | can be here....
+  And here. | Okay. | I think we get it.
+  
+  - And of course there are lists.
+    - Some are bulleted.
+       - With different indentation levels.
+          - That look like this.
+  
+  
+  You may write math:
+  
+  When $a \ne 0$, there are two solutions to $(ax^2 + bx + c = 0)$ and they are
+  
+  $$ x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$
+  
+  1. And there are numbered lists too.
+  1. Use just 1s if you want!
+  1. And last but not least, let's not forget embedded images:
+  
+  ![freeCodeCamp Logo](https://cdn.freecodecamp.org/testable-projects-fcc/images/fcc_secondary.svg)
+  </textarea></div>
+                <div class="h-1/2 w-full overflow-hidden bg-white py-8 px-4 sm:h-screen">
+                    <div id="preview" data-testid="preview"
+                        class="prose prose-slate m-auto prose-code:rounded prose-code:bg-slate-200 prose-code:py-0.5 prose-code:px-1 prose-code:before:content-none prose-code:after:content-none">
+                        <h1 id="welcome-to-my-react-markdown-previewer">Welcome to my React Markdown Previewer!</h1>
+                        <h2 id="this-is-a-sub-heading">This is a sub-heading...</h2>
+                        <h3 id="and-heres-some-other-cool-stuff">And here's some other cool stuff:</h3>
+                        <p>Heres some code, <code>&lt;div&gt;&lt;/div&gt;</code>, between 2 backticks.</p>
+                        <pre class="language-javascript" tabindex="0"><code class="language-javascript"><span class="token comment">// this is multi-line code:</span>
+  
+  <span class="token keyword">function</span> <span class="token function">anotherExample</span><span class="token punctuation">(</span><span class="token parameter">firstLine<span class="token punctuation">,</span> lastLine</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>firstLine <span class="token operator">==</span> <span class="token string">'```'</span> <span class="token operator">&amp;&amp;</span> lastLine <span class="token operator">==</span> <span class="token string">'```'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> multiLineCode<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+  </code></pre>
+                        <p>You can also make text <strong>bold</strong>... whoa!<br>Or <em>italic</em>.<br>Or... wait
+                            for it... <strong><em>both!</em></strong><br>And feel free to go crazy <del>crossing stuff
+                                out</del>.</p>
+                        <p>There's also <a href="https://www.freecodecamp.org">links</a>, and</p>
+                        <blockquote>
+                            <p>Block Quotes!</p>
+                        </blockquote>
+                        <p>And if you want to get really crazy, even tables:</p>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Wild Header</th>
+                                    <th>Crazy Header</th>
+                                    <th>Another Header?</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Your content can</td>
+                                    <td>be here, and it</td>
+                                    <td>can be here....</td>
+                                </tr>
+                                <tr>
+                                    <td>And here.</td>
+                                    <td>Okay.</td>
+                                    <td>I think we get it.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <ul>
+                            <li>And of course there are lists.<ul>
+                                    <li>Some are bulleted.<ul>
+                                            <li>With different indentation levels.<ul>
+                                                    <li>That look like this.</li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <p>You may write math:</p>
+                        <p>When <span class="katex-inline"><span class="katex"><span class="katex-mathml"><math
+                                            xmlns="http://www.w3.org/1998/Math/MathML">
+                                            <mrow>
+                                                <mi>a</mi>
+                                                <mo mathvariant="normal">≠</mo>
+                                                <mn>0</mn>
+                                            </mrow>a \ne 0
+                                        </math></span><span aria-hidden="true" class="katex-html"><span
+                                            class="base"><span style="height:0.8889em;vertical-align:-0.1944em;"
+                                                class="strut"></span><span class="mord mathnormal">a</span><span
+                                                style="margin-right:0.2778em;" class="mspace"></span><span
+                                                class="mrel"><span class="mrel"><span class="mord vbox"><span
+                                                            class="thinbox"><span class="rlap"><span
+                                                                    style="height:0.8889em;vertical-align:-0.1944em;"
+                                                                    class="strut"></span><span class="inner"><span
+                                                                        class="mord"><span
+                                                                            class="mrel"></span></span></span><span
+                                                                    class="fix"></span></span></span></span></span><span
+                                                    class="mrel">=</span></span><span style="margin-right:0.2778em;"
+                                                class="mspace"></span></span><span class="base"><span
+                                                style="height:0.6444em;" class="strut"></span><span
+                                                class="mord">0</span></span></span></span></span>, there are two
+                            solutions to <span class="katex-inline"><span class="katex"><span class="katex-mathml"><math
+                                            xmlns="http://www.w3.org/1998/Math/MathML">
+                                            <mrow>
+                                                <mo stretchy="false">(</mo>
+                                                <mi>a</mi>
+                                                <msup>
+                                                    <mi>x</mi>
+                                                    <mn>2</mn>
+                                                </msup>
+                                                <mo>+</mo>
+                                                <mi>b</mi>
+                                                <mi>x</mi>
+                                                <mo>+</mo>
+                                                <mi>c</mi>
+                                                <mo>=</mo>
+                                                <mn>0</mn>
+                                                <mo stretchy="false">)</mo>
+                                            </mrow>(ax^2 + bx + c = 0)
+                                        </math></span><span aria-hidden="true" class="katex-html"><span
+                                            class="base"><span style="height:1.0641em;vertical-align:-0.25em;"
+                                                class="strut"></span><span class="mopen">(</span><span
+                                                class="mord mathnormal">a</span><span class="mord"><span
+                                                    class="mord mathnormal">x</span><span class="msupsub"><span
+                                                        class="vlist-t"><span class="vlist-r"><span
+                                                                style="height:0.8141em;" class="vlist"><span
+                                                                    style="top:-3.063em;margin-right:0.05em;"><span
+                                                                        style="height:2.7em;"
+                                                                        class="pstrut"></span><span
+                                                                        class="sizing reset-size6 size3 mtight"><span
+                                                                            class="mord mtight">2</span></span></span></span></span></span></span></span><span
+                                                style="margin-right:0.2222em;" class="mspace"></span><span
+                                                class="mbin">+</span><span style="margin-right:0.2222em;"
+                                                class="mspace"></span></span><span class="base"><span
+                                                style="height:0.7778em;vertical-align:-0.0833em;"
+                                                class="strut"></span><span class="mord mathnormal">b</span><span
+                                                class="mord mathnormal">x</span><span style="margin-right:0.2222em;"
+                                                class="mspace"></span><span class="mbin">+</span><span
+                                                style="margin-right:0.2222em;" class="mspace"></span></span><span
+                                            class="base"><span style="height:0.4306em;" class="strut"></span><span
+                                                class="mord mathnormal">c</span><span style="margin-right:0.2778em;"
+                                                class="mspace"></span><span class="mrel">=</span><span
+                                                style="margin-right:0.2778em;" class="mspace"></span></span><span
+                                            class="base"><span style="height:1em;vertical-align:-0.25em;"
+                                                class="strut"></span><span class="mord">0</span><span
+                                                class="mclose">)</span></span></span></span></span> and they are</p>
+                        <div class="katex-block"><span class="katex-display"><span class="katex"><span
+                                        class="katex-mathml"><math display="block"
+                                            xmlns="http://www.w3.org/1998/Math/MathML">
+                                            <mrow>
+                                                <mi>x</mi>
+                                                <mo>=</mo>
+                                                <mfrac>
+                                                    <mrow>
+                                                        <mo>−</mo>
+                                                        <mi>b</mi>
+                                                        <mo>±</mo>
+                                                        <msqrt>
+                                                            <mrow>
+                                                                <msup>
+                                                                    <mi>b</mi>
+                                                                    <mn>2</mn>
+                                                                </msup>
+                                                                <mo>−</mo>
+                                                                <mn>4</mn>
+                                                                <mi>a</mi>
+                                                                <mi>c</mi>
+                                                            </mrow>
+                                                        </msqrt>
+                                                    </mrow>
+                                                    <mrow>
+                                                        <mn>2</mn>
+                                                        <mi>a</mi>
+                                                    </mrow>
+                                                </mfrac>
+                                            </mrow> x = {-b \pm \sqrt{b^2-4ac} \over 2a}
+                                        </math></span><span aria-hidden="true" class="katex-html"><span
+                                            class="base"><span style="height:0.4306em;" class="strut"></span><span
+                                                class="mord mathnormal">x</span><span style="margin-right:0.2778em;"
+                                                class="mspace"></span><span class="mrel">=</span><span
+                                                style="margin-right:0.2778em;" class="mspace"></span></span><span
+                                            class="base"><span style="height:2.2764em;vertical-align:-0.686em;"
+                                                class="strut"></span><span class="mord"><span class="mord"><span
+                                                        class="mopen nulldelimiter"></span><span class="mfrac"><span
+                                                            class="vlist-t vlist-t2"><span class="vlist-r"><span
+                                                                    style="height:1.5904em;" class="vlist"><span
+                                                                        style="top:-2.314em;"><span style="height:3em;"
+                                                                            class="pstrut"></span><span
+                                                                            class="mord"><span
+                                                                                class="mord">2</span><span
+                                                                                class="mord mathnormal">a</span></span></span><span
+                                                                        style="top:-3.23em;"><span style="height:3em;"
+                                                                            class="pstrut"></span><span
+                                                                            style="border-bottom-width:0.04em;"
+                                                                            class="frac-line"></span></span><span
+                                                                        style="top:-3.677em;"><span style="height:3em;"
+                                                                            class="pstrut"></span><span
+                                                                            class="mord"><span
+                                                                                class="mord">−</span><span
+                                                                                class="mord mathnormal">b</span><span
+                                                                                style="margin-right:0.2222em;"
+                                                                                class="mspace"></span><span
+                                                                                class="mbin">±</span><span
+                                                                                style="margin-right:0.2222em;"
+                                                                                class="mspace"></span><span
+                                                                                class="mord sqrt"><span
+                                                                                    class="vlist-t vlist-t2"><span
+                                                                                        class="vlist-r"><span
+                                                                                            style="height:0.9134em;"
+                                                                                            class="vlist"><span
+                                                                                                style="top:-3em;"
+                                                                                                class="svg-align"><span
+                                                                                                    style="height:3em;"
+                                                                                                    class="pstrut"></span><span
+                                                                                                    style="padding-left:0.833em;"
+                                                                                                    class="mord"><span
+                                                                                                        class="mord"><span
+                                                                                                            class="mord mathnormal">b</span><span
+                                                                                                            class="msupsub"><span
+                                                                                                                class="vlist-t"><span
+                                                                                                                    class="vlist-r"><span
+                                                                                                                        style="height:0.7401em;"
+                                                                                                                        class="vlist"><span
+                                                                                                                            style="top:-2.989em;margin-right:0.05em;"><span
+                                                                                                                                style="height:2.7em;"
+                                                                                                                                class="pstrut"></span><span
+                                                                                                                                class="sizing reset-size6 size3 mtight"><span
+                                                                                                                                    class="mord mtight">2</span></span></span></span></span></span></span></span><span
+                                                                                                        style="margin-right:0.2222em;"
+                                                                                                        class="mspace"></span><span
+                                                                                                        class="mbin">−</span><span
+                                                                                                        style="margin-right:0.2222em;"
+                                                                                                        class="mspace"></span><span
+                                                                                                        class="mord">4</span><span
+                                                                                                        class="mord mathnormal">a</span><span
+                                                                                                        class="mord mathnormal">c</span></span></span><span
+                                                                                                style="top:-2.8734em;"><span
+                                                                                                    style="height:3em;"
+                                                                                                    class="pstrut"></span><span
+                                                                                                    style="min-width:0.853em;height:1.08em;"
+                                                                                                    class="hide-tail"><svg
+                                                                                                        preserveAspectRatio="xMinYMin slice"
+                                                                                                        viewBox="0 0 400000 1080"
+                                                                                                        height="1.08em"
+                                                                                                        width="400em"
+                                                                                                        xmlns="http://www.w3.org/2000/svg">
+                                                                                                        <path d="M95,702
+  c-2.7,0,-7.17,-2.7,-13.5,-8c-5.8,-5.3,-9.5,-10,-9.5,-14
+  c0,-2,0.3,-3.3,1,-4c1.3,-2.7,23.83,-20.7,67.5,-54
+  c44.2,-33.3,65.8,-50.3,66.5,-51c1.3,-1.3,3,-2,5,-2c4.7,0,8.7,3.3,12,10
+  s173,378,173,378c0.7,0,35.3,-71,104,-213c68.7,-142,137.5,-285,206.5,-429
+  c69,-144,104.5,-217.7,106.5,-221
+  l0 -0
+  c5.3,-9.3,12,-14,20,-14
+  H400000v40H845.2724
+  s-225.272,467,-225.272,467s-235,486,-235,486c-2.7,4.7,-9,7,-19,7
+  c-6,0,-10,-1,-12,-3s-194,-422,-194,-422s-65,47,-65,47z
+  M834 80h400000v40h-400000z"></path>
+                                                                                                    </svg></span></span></span><span
+                                                                                            class="vlist-s">​</span></span><span
+                                                                                        class="vlist-r"><span
+                                                                                            style="height:0.1266em;"
+                                                                                            class="vlist"><span></span></span></span></span></span></span></span></span><span
+                                                                    class="vlist-s">​</span></span><span
+                                                                class="vlist-r"><span style="height:0.686em;"
+                                                                    class="vlist"><span></span></span></span></span></span><span
+                                                        class="mclose nulldelimiter"></span></span></span></span></span></span></span>
+                        </div>
+                        <ol>
+                            <li>And there are numbered lists too.</li>
+                            <li>Use just 1s if you want!</li>
+                            <li>And last but not least, let's not forget embedded images:</li>
+                        </ol>
+                        <p><img alt="freeCodeCamp Logo"
+                                src="https://cdn.freecodecamp.org/testable-projects-fcc/images/fcc_secondary.svg"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="//cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    <div id="fcc_test_suite_wrapper" style="position: relative !important; z-index: 99999 !important;"></div>
+
+
+
+
+</body>
+
+</html>
